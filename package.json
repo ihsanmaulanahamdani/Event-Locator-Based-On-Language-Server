@@ -1,5 +1,5 @@
 {
-  "name": "event-locator-based-on-language-server",
+  "name": "server",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,11 @@
     "axios": "^0.18.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
+    "country-language": "^0.1.7",
     "debug": "~2.6.9",
+    "detectlanguage": "^1.2.2",
     "dotenv": "^5.0.1",
     "express": "~4.16.0",
-    "fb": "^2.0.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.2.1",
