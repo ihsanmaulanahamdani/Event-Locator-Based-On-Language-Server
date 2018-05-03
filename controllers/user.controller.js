@@ -5,7 +5,7 @@ const jwt      = require('jsonwebtoken')
 
 module.exports = {
   loginFb: (req, res) => {
-    FB.api('me', { fields: ['id', 'name', 'email'], access_token: req.headers.fbToken }, function (response) {
+    FB.api('me', { fields: ['id', 'name', 'email'], access_token: req.headers.fbtoken }, function (response) {
       User
         .findOne({
           email: response.email
