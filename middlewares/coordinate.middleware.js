@@ -1,4 +1,4 @@
-function getCoordinate (req, res) {
+function getCoordinate (req, res, next) {
     let capital_name = req.capital
     let mapApiKey = process.env.GOOGLE_MAP_API_KEY
 
