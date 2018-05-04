@@ -1,8 +1,9 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+require('dotenv').config()
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 const mongoose     = require('mongoose')
 const cors         = require('cors')
 
@@ -13,6 +14,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('success connect database')
 })
+
 
 var indexRouter = require('./routes/index');
 var languageRouter = require('./routes/language');
