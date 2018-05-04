@@ -12,7 +12,7 @@ module.exports = {
             next()
         })
         .catch((err) => {
-            console.log(err)    
+            console.log(err)
         })
     
     }

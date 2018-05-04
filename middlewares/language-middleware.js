@@ -9,7 +9,9 @@ var CountryLanguage = require('country-language');
 
 module.exports={
     getFullLanguage: function(req,res,next){
-        detectLanguage.detect(req.params.words, function(error, result) {
+        let words = req.params.words.replace(/%20/gi, ' ');
+        
+        detectLanguage.detect(words, function(error, result) {
             var codelang = result[0].language
             CountryLanguage.getLanguageCountries(codelang, function (err, countries) {
                 if (err) {
