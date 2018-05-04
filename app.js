@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose     = require('mongoose')
 const cors         = require('cors')
+
 mongoose.connect('mongodb://eventlocator:locatorevent@ds113200.mlab.com:13200/eventlocator')
 
 var db = mongoose.connection;
@@ -15,6 +16,7 @@ db.once('open', function() {
 
 var indexRouter = require('./routes/index');
 var languageRouter = require('./routes/language');
+var searchRouter = require('./routes/search')
 
 var app = express();
 
@@ -32,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/language', languageRouter);
 app.use('/users', usersRouter);
+app.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
